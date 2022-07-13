@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huawei_jinrong?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: mysqladmin
+  application:
+    name: risk-service-provider
+mybatis:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  type-aliases-package: com.qst.risk.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+eureka:  #配置eureka
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka
+  instance:
+    instance-id: risk-service-provider-8081

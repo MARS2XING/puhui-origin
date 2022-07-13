@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qst.risk.mapper.LoansMapper">
+
+    <select id="selectLoansByLoaNo" resultType="string" parameterType="String">
+        select loa_id from loans where loa_no=#{loaNo}
+    </select>
+
+    <update id="updateLoaMoney" parameterType="com.qst.risk.entity.Loans">
+        update loans set loa_money = #{loa_money} where loa_id = #{loa_id}
+    </update>
+</mapper>
