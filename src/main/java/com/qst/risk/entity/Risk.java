@@ -1,17 +1,30 @@
 package com.qst.risk.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
+@ApiModel(description = "风控数据")
 public class Risk {
 
+    @ApiModelProperty(value = "主键Id")
     private int risk_id;  //主键
+    @ApiModelProperty(value = "贷款编号")
     private String loa_no;  //贷款编号
+    @ApiModelProperty(value = "企业名称")
     private String com_name;  //企业名称
+    @ApiModelProperty(value = "贷款金额")
     private Long loa_money;  //贷款金额
+    @ApiModelProperty(value = "贷款周期")
     private Long loa_lis_id;   //贷款周期
+    @ApiModelProperty(value = "抵押物价值")
     private String apt_price;  //抵押物价值
+    @ApiModelProperty(value = "月流水最小值")
     private Integer month_account_min;  //月流水最小值
+    @ApiModelProperty(value = "总负债值")
     private String gross_liabilities;  //总负债值
+    @ApiModelProperty(value = "额度值")
     private String credit_line;   //额度值
+    @ApiModelProperty(value = "否删除 0存在 2删除")
     private String risk_del = "0";  //是否删除 0存在 2删除
 
     public int getRisk_id() {
