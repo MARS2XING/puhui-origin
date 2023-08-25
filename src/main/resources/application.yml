@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/huawei_jinrong?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/financial_lending?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
-    password: mysqladmin
+    password: 123456a?
   application:
     name: risk-service-provider
 mybatis:
